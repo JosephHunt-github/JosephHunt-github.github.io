@@ -25,7 +25,7 @@
 </head>
 <body class="board">
 	<!-- HTML for the box -->
-	<div class="box">?</div>
+	<div class="box">0</div>
 
 	<script>
 		(function(){
@@ -69,20 +69,20 @@
 			var posY = 0
 			var dY = 1
 			var dX = 1
-			var randNum = Math.random() * 100
-			var colorStr = "rgb(50, 25, 250)";
-				box.css('background-color', colorStr);
-				var randomNumberBetween0and10 = Math.random(0,10) * 10;
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
+
+			
 			function update() {
 				posX = posX + (speed * dX);
 				posY = posY + (speed * dY);
 				moveBoxTo(posX, posY);
+				
+			
 				
 				if (posX >= boardWidth) {
 						dX = -1;
@@ -104,9 +104,7 @@
 			it should increase the points total, increase the speed, and move the box to
 			the left side of the screen.
 			*/
-			function getRandomColor() {
-				
-			}
+
 			
 			function handleBoxClick() {
 				posX = 0
@@ -114,9 +112,9 @@
 				points = points + 1
 				changeBoxText(points);
 				speed = speed + 3
-
-			};
-		})();
+				
+				};
+			})();
 	</script>
 </body>
 </html>
