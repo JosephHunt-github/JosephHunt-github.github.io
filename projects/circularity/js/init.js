@@ -22,6 +22,11 @@ var init = function (window) {
         // TODO 1 : Declare and initialize our variables
             var circle;
             var circles = [];
+            var borderRandom = 1;
+            var mouseX = 0;
+            var mouseY = 0;
+            var maxCircles = 100;
+            var recentIntercept = false;
 
         // TODO 2 : Create a function that draws a circle 
         function drawCircle() {
